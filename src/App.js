@@ -1,51 +1,26 @@
-import Directory from "./components/directory/directory.component";
+import { Routes, Route, Outlet } from "react-router-dom";
 
-import maldive from "./assets/img/maldive.jpg";
-import hawaii from "./assets/img/hawaii.jpg";
-import japan from "./assets/img/japan.jpg";
-import tibet from "./assets/img/tibet.jpg";
-import cuba from "./assets/img/cuba.jpg";
-import { ReactComponent as Ellipse1 } from "./assets/svg/Ellipse1.svg";
-import { ReactComponent as Ellipse2 } from "./assets/svg/Ellipse2.svg";
-import { ReactComponent as Ellipse3 } from "./assets/svg/Ellipse3.svg";
-import { ReactComponent as Ellipse4 } from "./assets/svg/Ellipse4.svg";
-import { ReactComponent as Ellipse5 } from "./assets/svg/Ellipse5.svg";
+import Home from "./routes/home/home.component";
+
+const Navigation = () => {
+  return (
+    <div>
+      <div>
+        <h1>I am the navigation bar</h1>
+      </div>
+      <Outlet />
+    </div>
+  );
+};
 
 const App = () => {
-  const destinations = [
-    {
-      id: 1,
-      title: "Maldive",
-      imageUrl: maldive,
-      Svg: Ellipse1,
-    },
-    {
-      id: 2,
-      title: "Hawaii",
-      imageUrl: hawaii,
-      Svg: Ellipse2,
-    },
-    {
-      id: 3,
-      title: "Tibet",
-      imageUrl: tibet,
-      Svg: Ellipse3,
-    },
-    {
-      id: 4,
-      title: "Cuba",
-      imageUrl: cuba,
-      Svg: Ellipse4,
-    },
-    {
-      id: 5,
-      title: "Japan",
-      imageUrl: japan,
-      Svg: Ellipse5,
-    },
-  ];
-
-  return <Directory destinations={destinations} />;
+  return (
+    <Routes>
+      <Route path='/' element={<Navigation />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
