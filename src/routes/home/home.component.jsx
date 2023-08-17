@@ -1,9 +1,6 @@
 import Directory from "../../components/directory/directory.component";
 
-import maldive from "../../assets/img/maldive.jpg";
 import hawaii from "../../assets/img/hawaii.jpg";
-import japan from "../../assets/img/japan.jpg";
-import tibet from "../../assets/img/tibet.jpg";
 import cuba from "../../assets/img/cuba.jpg";
 import { ReactComponent as Ellipse1 } from "../../assets/svg/Ellipse1.svg";
 import { ReactComponent as Ellipse2 } from "../../assets/svg/Ellipse2.svg";
@@ -15,32 +12,35 @@ const Home = () => {
   const destinations = [
     {
       id: 1,
-      title: "Maldive",
-      imageUrl: maldive,
+      title: "Mountains",
+      imageUrl:
+        "https://images.pexels.com/photos/1647972/pexels-photo-1647972.jpeg?auto=compress&cs=tinysrgb&w=1600",
       Svg: Ellipse1,
     },
     {
       id: 2,
-      title: "Hawaii",
+      title: "Seaside",
       imageUrl: hawaii,
       Svg: Ellipse2,
     },
     {
       id: 3,
-      title: "Tibet",
-      imageUrl: tibet,
+      title: "Architecture marvels",
+      imageUrl:
+        "https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&w=1600",
       Svg: Ellipse3,
     },
     {
       id: 4,
-      title: "Cuba",
+      title: "Historical",
       imageUrl: cuba,
       Svg: Ellipse4,
     },
     {
       id: 5,
-      title: "Japan",
-      imageUrl: japan,
+      title: "Art",
+      imageUrl:
+        "https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=1600",
       Svg: Ellipse5,
     },
   ];

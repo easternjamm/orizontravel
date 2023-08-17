@@ -1,9 +1,9 @@
-import "./destination-item.styles.scss";
+import "./directory-item.styles.scss";
 
-const DestinationItem = ({ destination }) => {
+const DirectoryItem = ({ destination }) => {
   const { imageUrl, title, id, Svg } = destination;
   return (
-    <div className='destination-container'>
+    <div className='directory-item-container'>
       <img
         className='background-img'
         src={imageUrl}
@@ -23,7 +23,7 @@ const DestinationItem = ({ destination }) => {
         }
       />
 
-      <div className='destination-body-container'>
+      <div className='body'>
         <h2>{title}</h2>
         <p>Get ticket</p>
       </div>
@@ -31,4 +31,4 @@ const DestinationItem = ({ destination }) => {
   );
 };
 
-export default DestinationItem;
+export default DirectoryItem;
